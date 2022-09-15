@@ -1,33 +1,104 @@
 import express from "express";
+import cors from "cors";
+
+import { PrismaClient } from "@prisma/client"
+
+import { convertHourStringToMinutes } from './utils/convert-hour-string-to-minutes';
+import { convertMinutesToHourString } from "./utils/convert-minutes-to-hour-string";
 
 const app = express();
 
-// Route to return all games with ads amounts
-app.get("/games", (request, response) => {
-    return response.json([]);
+app.use(express.json());
+app.use(cors());
+
+const prisma = new PrismaClient();
+
+// Route to return all games with ads amounts 
+app.get("/games", async (request, response) => {
+    const games = await prisma.game.findMany({
+        include: {
+            _count: {
+                select: {
+                    ads: true
+                }
+            }
+        }
+    });
+
+    return response.json(games);
 })
 
+// Route to create a new ad 
+app.post("/games/:id/ads", async (request, response) => {
+    const gameId = request.params.id;
+    const body: any = request.body;
 
-// Route to create a new ad
-app.post("/ads", (request, response) => {
-    return response.status(201).json([]);
+    const ad = await prisma.ad.create({
+        data: {
+            gameId,
+            name: body.name,
+            yearsPlaying: body.yearsPlaying,
+            discord: body.discord,
+            weekDays: body.weekDays.join(','),
+            hourStart: convertHourStringToMinutes(body.hourStart),
+            hourEnd: convertHourStringToMinutes(body.hourEnd),
+            useVoiceChannel: body.useVoiceChannel
+        }
+    })
+
+    return response.status(201).json(ad);
 })
 
-
-// Route to return ads by game
-app.get("/games/:id/ads", (request, response) => {
+// Route to return ads by game id 
+app.get("/games/:id/ads", async (request, response) => {
     const gameId = request.params.id;
 
-    return response.json([]);
+    const ads = await prisma.ad.findMany({
+        select: {
+            id: true,
+            name: true,
+            weekDays: true,
+            useVoiceChannel: true,
+            yearsPlaying: true,
+            hourStart: true, 
+            hourEnd: true
+        },
+        where: {
+            gameId
+        },
+        orderBy: {
+            createdAt: 'desc'
+        }
+    })
+
+    const allAdsByGame = ads.map(ad => {
+        return {
+            ...ad,
+            weekDays: ad.weekDays.split(','),
+            hourStart: convertMinutesToHourString(ad.hourStart),
+            hourEnd: convertMinutesToHourString(ad.hourEnd)
+        }
+    })
+
+    return response.json(allAdsByGame);
 })
 
-
-// Route to return discord by ad id
-app.get("/ads/:id/discord", (request, response) => {
+// Route to return discord by ad id 
+app.get("/ads/:id/discord", async (request, response) => {
     const adId = request.params.id;
 
-    return response.json([]);
+    const ad = await prisma.ad.findUniqueOrThrow({
+        select: {
+            discord: true
+        },
+        where: {
+            id: adId
+        }
+    })
+
+    return response.json({
+        discord: ad.discord
+    });
 })
 
-
-app.listen(3333);
+app.listen(3333, () => console.log('\nServer is running on port: 3333'));
