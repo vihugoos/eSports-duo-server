@@ -8,7 +8,7 @@
   </h2>
   
   <p align="center">
-    The eSports duo server to access resources like listing games and creating new ads, developed with Node.js <br/>
+    The eSports duo server to access application resources, developed with Node.js <br/>
     Explore <a href="https://nodejs.org/en/docs/">Node.js</a> docs &#187; <br/> <br/>
     <a href="https://github.com/vihugoos/eSports-duo-server/issues"> Report Bug </a> &nbsp;•&nbsp;
     <a href="https://github.com/vihugoos/eSports-duo-server/issues"> Request Feature </a>
