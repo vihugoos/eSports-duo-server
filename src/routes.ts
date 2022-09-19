@@ -38,7 +38,7 @@ routes.post("/games/:id/ads", async (request, response) => {
             hourEnd: convertHourStringToMinutes(body.hourEnd),
             useVoiceChannel: body.useVoiceChannel
         }
-    })
+    });
 
     return response.status(201).json(ad);
 })
@@ -63,7 +63,7 @@ routes.get("/games/:id/ads", async (request, response) => {
         orderBy: {
             createdAt: 'desc'
         }
-    })
+    });
 
     const allAdsByGame = ads.map(ad => {
         return {
@@ -72,7 +72,7 @@ routes.get("/games/:id/ads", async (request, response) => {
             hourStart: convertMinutesToHourString(ad.hourStart),
             hourEnd: convertMinutesToHourString(ad.hourEnd)
         }
-    })
+    });
 
     return response.json(allAdsByGame);
 })
@@ -88,7 +88,7 @@ routes.get("/ads/:id/discord", async (request, response) => {
         where: {
             id: adId
         }
-    })
+    });
 
     return response.json({
         discord: ad.discord
