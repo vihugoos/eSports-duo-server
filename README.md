@@ -117,7 +117,7 @@ With the installation complete, we can start the project.
    ```
    
 * To view the database in an easy and intuitive way, just use Prisma Studio. <br/>
-  <strong>Obs:</strong> <i> You can create some games manually to view in the app. </i>
+  <strong>Obs:</strong> <i> You can create some games manually to view in the app. The examples used were taken from <a href="https://www.twitch.tv/directory">Twitch</a>.</i>
   ```
   npx prisma studio 
   ```
