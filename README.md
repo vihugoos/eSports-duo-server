@@ -1,22 +1,17 @@
 <div id="top"> </div>
 
-[![tests](https://github.com/vihugoos/feedback-widget-server/actions/workflows/test.yml/badge.svg)](https://github.com/vihugoos/feedback-widget-server/actions/workflows/test.yml)
-[![Coverage Status](https://coveralls.io/repos/github/vihugoos/feedback-widget-server/badge.svg?branch=main)](https://coveralls.io/github/vihugoos/feedback-widget-server?branch=main)
-[![Build Status](https://app.travis-ci.com/vihugoos/feedback-widget-server.svg?branch=main)](https://app.travis-ci.com/vihugoos/feedback-widget-server)
-
 <!---- PROJECT LOGO ----> 
 <div align="center">
 
   <h2 align="center"> 
-    Feedback Widget - Server API
+    eSports Duo - Server API
   </h2>
   
   <p align="center">
-    The feedback widget server to save feedbacks and send emails, developed with Node.js <br/>
+    The eSports duo server to access resources like listing games and creating new ads, developed with Node.js <br/>
     Explore <a href="https://nodejs.org/en/docs/">Node.js</a> docs &#187; <br/> <br/>
-    <a href="https://feedback-widget-server-production-fc59.up.railway.app/"> Deployment URL </a> &nbsp;•&nbsp;
-    <a href="https://github.com/vihugoos/feedback-widget-server/issues"> Report Bug </a> &nbsp;•&nbsp;
-    <a href="https://github.com/vihugoos/feedback-widget-server/issues"> Request Feature </a>
+    <a href="https://github.com/vihugoos/eSports-duo-server/issues"> Report Bug </a> &nbsp;•&nbsp;
+    <a href="https://github.com/vihugoos/eSports-duo-server/issues"> Request Feature </a>
   </p>
 </div>
 
@@ -39,7 +34,6 @@
       </ul>
     </li>
     <li><a href="#usage"> Usage </a></li>
-    <li><a href="#tests"> Tests </a></li>
     <li><a href="#contributing"> Contributing </a></li>
     <li><a href="#contact"> Contact </a></li>
   </ol>
@@ -50,7 +44,7 @@
 ## About The Project
 
 <img src="https://user-images.githubusercontent.com/44311634/178651138-54b1b11c-0776-48d0-8ec8-436671eeab48.png" align="center" align="center" alt="Project Home Page">
-The Feedback Widget Server API to save the feedbacks in the database and send an email with complete information about the feedback to the administrator. 
+The eSports Duo Server API to access all platform features, such as listing all games, creating a new ad, returning all ads per game and the discord of a specific ad. 
 
 
 ### Built With 
