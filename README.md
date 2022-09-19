@@ -43,7 +43,7 @@
 <!---- THE PROJECT ---->
 ## About The Project
 
-<img src="https://user-images.githubusercontent.com/44311634/178651138-54b1b11c-0776-48d0-8ec8-436671eeab48.png" align="center" align="center" alt="Project Home Page">
+<img src="https://user-images.githubusercontent.com/44311634/191111648-c95767e3-405b-4a94-b476-2324317d3cf1.png" align="center" alt="Project Home Page">
 The eSports Duo Server API to access all platform features, such as listing all games, creating a new ad, returning all ads by game and the discord of a specific ad. 
 
 
