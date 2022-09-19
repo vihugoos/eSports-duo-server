@@ -79,9 +79,7 @@ The eSports Duo Server API to access all platform features, such as listing all 
 <!---- GETTING STARTED ----> 
 ## Getting Started
 
-To get started, you need to have <strong>Node.js 16+</strong> installed on your machine, for more information visit <a href="https://nodejs.org/en/download/"> Node.js Downloads</a>. You will also need to have <strong>PostgreSQL</strong> installed, for more information visit <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads"> PostgreSQL Downloads</a>. 
-
-<strong>WARNING</strong>: Add PostgreSQL executable path to user <strong>environment variables</strong>, to be able to use the `psql` command in the terminal, or create a database called `feedback_widget` via graphical user interface using the pgAdmin, it's up to you what you think is best. <strong>Note:</strong> This installation guide is based on Windows systems. 
+To get started, you need to have <strong>Node.js 16+</strong> installed on your machine, for more information visit <a href="https://nodejs.org/en/download/"> Node.js Downloads</a>. 
 
 
 ### Prerequisites 
@@ -109,15 +107,15 @@ First of all, we need to ensure that the database server is running, to do so, r
 
 1. Clone the repo 
    ```bash
-   git clone https://github.com/vihugoos/feedback-widget-server.git
+   git clone https://github.com/vihugoos/eSports-duo-server.git
    ```
 2. Inside the project root directory install all project dependencies 
    ```cmd
    npm install
    ```
-3. Create an `.env` file with the database connection configuration (don't forget to change the password) 
+3. Create an `.env` file with the database connection configuration 
    ```cmd
-   echo "DATABASE_URL='postgresql://postgres:yourPassword@localhost:5432/feedback_widget?schema=public'" > .env 
+   echo "DATABASE_URL='file:../src/database/db.sqlite'" > .env 
    ``` 
 4. Run the migrate 
    ```cmd
@@ -139,18 +137,7 @@ With the installation complete, we can start the project.
   ```
   npx prisma studio 
   ```
-
-
-<!---- TESTS ----> 
-## Tests
-
-Keep all tests always with <strong>100% coverage</strong>, for more information see `.\coverage\Icov-report\index.html`
-
-* Run tests  
-   ```cmd
-   npm run test
-   ```
-  <br/>  
+<br/>
 
 
 <!---- CONTRIBUTING ---->
