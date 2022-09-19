@@ -66,17 +66,9 @@ The eSports Duo Server API to access all platform features, such as listing all 
     <a href="https://expressjs.com/"> 
       <img align="center" alt="Icon-Express" height="35" src="https://user-images.githubusercontent.com/44311634/178337147-61b1e696-b4ef-4f78-8151-c3fb2597050a.png"> 
     </a> &nbsp;
-    <!-- Icon Nodemailer 
-    <a href="https://nodemailer.com/about/"> 
-      <img align="center" alt="Icon-Nodemailer" height="35" src="https://user-images.githubusercontent.com/44311634/178336455-62647b4d-4187-443e-a973-452774dbcdba.png"> 
-    </a> &nbsp; -->
-    <!-- Icon Jest -->
-    <a href="https://jestjs.io/"> 
-      <img align="center" alt="Icon-Jest" height="35" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"> 
-    </a> &nbsp;
-    <!-- Icon PostgreSQL --> 
-    <a href="https://www.postgresql.org/"> 
-      <img align="center" alt="Icon-PostgreSQL" height="38" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg"> 
+    <!-- Icon SQLite --> 
+    <a href="https://www.sqlite.org/"> 
+      <img align="center" alt="Icon-SQLite" height="38" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"> 
     </a> 
 </div>
 
