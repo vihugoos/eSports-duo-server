@@ -116,7 +116,8 @@ With the installation complete, we can start the project.
    npm run dev  
    ```
    
-* To view the database feedback table in an easy and intuitive way, just use Prisma Studio
+* To view the database feedback table in an easy and intuitive way, just use Prisma Studio. <br/>
+  <strong>Obs:</strong> <i> You can create some games manually to view in the app. </i>
   ```
   npx prisma studio 
   ```
